@@ -12,12 +12,18 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Name</th>
+            <th id="centered">Name</th>
+            <th id="centered">Description</th>
+            <th id="centered">Where da party at</th>
         </tr>
     </thead>
+
     <tr th:each="event: ${events}">
-        <td th:text="${event}"></td>
+        <td id="centered" th:text="${event.getKey}"></td>
+        <td id="centered" th:text="${event.getValue}"></td>
+        <td id="centered" th:replace="fragments :: address"></td>
     </tr>
+
 </table>
 
 </body>
