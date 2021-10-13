@@ -3,22 +3,17 @@
 <head th:fragment="head">
     <meta charset="UTF-8"/>
     <title>Coding Events</title>
-
-    <script th:src="@{/script.js}"></script>
-    <link th:href="@{/styles.css}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<td id="centered" th:fragment="address">10400 Bales Ave</td>
-
-<nav th:fragment="navigation">
+<nav th:fragment="header">
+    <h1 th:text="${title}">Coding Events</h1>
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="/events">All Events</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
+        <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Event</a></li>
     </ul>
 </nav>
 
